@@ -7,10 +7,10 @@
                         <!-- TABS -->
                         <ul class="nav nav-pills mb-3">
                             <li class="nav-item">
-                                <router-link class="nav-link" :to="">NOTES</router-link>
+                                <router-link class="nav-link" :to="{ name: 'notes' }">NOTES</router-link>
                             </li>
                             <li class="nav-item">
-                                <router-link class="nav-link" :to="">TAGS</router-link>
+                                <router-link class="nav-link" :to="{ name: 'tags' }">TAGS</router-link>
                             </li>
                         </ul>
 
