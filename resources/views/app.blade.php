@@ -17,6 +17,9 @@
     </head>
     <body class="antialiased">
     <div id="app"></div>
+        <script>
+            const BASE_URL = "{{ url('/') }}"
+        </script>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
