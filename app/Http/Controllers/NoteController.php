@@ -5,18 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Note;
 use App\Http\Requests\NoteRequest;
+use App\Http\Resources\NoteResource;
 
 class NoteController extends Controller
 {
 
     /**
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function getAllNotes()
     {
         $notes = Note::with('tags')->get()->toArray();
 
-        return response()->json($notes,200);
+        return NoteResource::collection(Note::orderBy('created_at','desc')->get());
     }
 
     /**
