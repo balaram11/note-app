@@ -11,4 +11,21 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-export default new VueRouter();
+import Note from './views/Note.vue'
+import Tag from './views/Tag.vue'
+
+export default new VueRouter({
+    linkExactActiveClass:'active',
+    routes:[
+        {
+            path: '/notes',
+            name: 'notes',
+            component: Note
+        },
+        {
+            path: '/tags',
+            name: 'tags',
+            component: Tag
+        },
+    ]
+});
