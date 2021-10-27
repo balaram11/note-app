@@ -13,7 +13,7 @@ class TagController extends Controller
      */
     public function getAllTags()
     {
-        $tags = Tag::get()->toArray();
+        $tags = Tag::orderBy('created_at','desc')->get()->toArray();
 
         return response()->json($tags,200);
     }
