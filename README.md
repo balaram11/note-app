@@ -6,8 +6,11 @@
 
 - Laravel (PHP MVC Framework)
 - Vue.js (Javascript Framework)
-- MySql
 - Bootstrap (CSS)
+
+
+- MySql
+- PHP
 
 
 ## Steps to install App
