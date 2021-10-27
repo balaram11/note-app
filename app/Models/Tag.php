@@ -24,4 +24,13 @@ class Tag extends Model
     {
         return $this->belongsToMany(Note::class);
     }
+
+    public static function boot() {
+        parent::boot();
+
+        static::deleting(function($tag) {
+            $tag->notes()->detach();
+        });
+
+    }
 }
