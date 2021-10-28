@@ -13,7 +13,7 @@
 - PHP
 
 
-## Steps to install App
+## Steps to install App with docker
 
 - Step 1: git clone https://github.com/balaram11/note-app.git
 - Step 2: Run `Composer update` in app root directory 
